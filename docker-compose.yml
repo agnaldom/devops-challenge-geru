@@ -1,0 +1,23 @@
+version: '3'
+services:
+    app:
+         build: .
+         ports:
+             - "5000:5000"
+         env_file:
+             -  env_file
+         networks:
+             - web_app
+     nginx:
+         image: nginx:latest
+         ports:
+             - "8080:80"
+         volumes:
+             - ./conf.d:/etc/nginx/conf.d
+         networks:
+             - web_app
+networks: 
+    web_app:
+        drive: bridge
+        
+
