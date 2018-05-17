@@ -1,13 +1,15 @@
 version: '3'
 services:
     app:
-         build: .
-         ports:
-             - "5000:5000"
-         env_file: .env
-         networks:
-             - web_app
-     nginx:
+        build: .
+        ports:
+            - "5000:5000"
+        environment:
+            - ENVIRONMENT='production'
+        env_file: .env
+        networks:
+            - web_app
+    nginx:
          image: nginx:latest
          ports:
              - "8080:80"
@@ -17,6 +19,6 @@ services:
              - web_app
 networks: 
     web_app:
-        drive: bridge
+        driver: bridge
         
 
