@@ -1,4 +1,4 @@
-FROM python:3-alpane
+FROM python:3-alpine
 
 RUN apk add --virtual .buil-dependencies \
                         --no-cache \
