@@ -17,7 +17,7 @@ RUN pip install --no-cache -r requirements.txt
 #RUN apk del .build-dependencies 
 RUN rm -rf /var/cache/apk*
 
-ARG GERU_PASS
+ENV GERU_PASS=$GERU_PASS
 
 EXPOSE 5000
 ENTRYPOINT [ "python" ]
