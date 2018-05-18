@@ -11,5 +11,7 @@
 8. Clone o projeto: $ git https://github.com/agnaldom/devops-challenge.git 
 9. Entra no projeto: $ cd devops-challenge/
 10. Build do projeto: 	# docker-compose build
-11. Run projeto: # docker-compose up -d
-11. Vá para a [instance-public-dns] para ver o seu app
+11. Você deve criar o varial de ambiente no .env com uma nova senha
+12. Run projeto: # docker-compose up -d
+13. Vá para a [instance-public-dns] para ver o seu app
+
